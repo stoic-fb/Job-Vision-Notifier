@@ -76,17 +76,68 @@ Paste the code into Google Apps Script editor.
 
 ---
 
-### 5. Set Trigger
+Fair enough, the last one was too “tutorial-bloggy”. Here’s a **clean, professional Step 5** that actually fits a real GitHub project:
 
-Create a time-driven trigger:
 
-Function:
+### 5. Set Up Trigger (Required)
+
+This project does not run continuously on its own.
+You must create a time-driven trigger for automatic execution.
+
+-------------------------------
+How to create the trigger
+-------------------------------
+
+1. Open your Google Apps Script project
+2. Go to the left panel → "Triggers" (clock icon)
+3. Click "Add Trigger"
+4. Configure it as follows:
+
+Function to run:
 checkNotifications
 
+Deployment:
+Head
 
-Recommended interval:
-- Every 1 minute (real-time updates)
-- Or every 5 minutes (light usage)
+Event source:
+Time-driven
+
+Type of time-based trigger:
+Choose one:
+
+- Every 1 minute   → real-time updates (recommended)
+- Every 5 minutes   → balanced performance
+- Every 10 minutes  → lower quota usage
+
+-------------------------------
+Recommended configuration
+-------------------------------
+
+If this is a production bot:
+→ Every 1–5 minutes is ideal
+
+If you're testing:
+→ Every 1 minute
+
+-------------------------------
+Failure settings
+-------------------------------
+
+Set:
+"Notify me immediately"
+
+This ensures you get alerted if the script stops working.
+
+-------------------------------
+After setup
+-------------------------------
+
+Once enabled:
+- checkNotifications() runs automatically
+- new notifications are sent to Telegram instantly
+- duplicates are automatically filtered
+- errors are reported to your admin chat
+
 
 ---
 
