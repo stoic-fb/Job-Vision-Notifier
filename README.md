@@ -51,11 +51,25 @@ You can get it using:
 
 ### 3. Add Script Properties (IMPORTANT)
 
-In Google Apps Script → Project Settings → Script Properties:
+Open your Apps Script project settings:
+[GAS](https://script.google.com/home/projects)
 
-- BOT_TOKEN = your_telegram_bot_token
-- CHAT_ID = your_chat_id
-- JOBVISION_TOKEN = your_jobvision_api_token 
+Then go to:
+Project Settings (⚙️) → Script Properties → Add Property
+
+Add these keys:
+
+BOT_TOKEN
+→ Get from: [BotFather](https://t.me/BotFather)
+
+CHAT_ID
+→ Get from: [UserInfoBot](https://t.me/userinfobot)
+
+
+JOBVISION_TOKEN
+→ Your JobVision API token (from your account/dashboard) // check step 3.1 for more information
+
+Make sure all values are set correctly before running the script.
 
 ### 3.1 How To Get JOB VISION TOKEN
  1. go to [JobVISION](https://jobvision.ir)
