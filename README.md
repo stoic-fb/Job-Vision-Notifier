@@ -80,6 +80,9 @@ Make sure all values are set correctly before running the script.
  5. find the GetContactInfo request
  6. In the headers you wil find authorization ( we need this in order for app to work with the job vision API)
 
+>[!WARNING]
+> Each time you login into JobVision the authentication token will be reset and you need to set it again
+
 > [!TIP]
 > we don't need the Bearer in the token just the ey....
     
