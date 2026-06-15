@@ -198,8 +198,19 @@ function handleFatalError(error) {
 /* ------------------------- UTIL ------------------------- */
 
 function formatNotification(n) {
+  // Determine emoji based on title content
+  let emoji = "🔔"; // default
+  
+  if (n.title.includes("رد شد")) {
+    emoji = "❌"; // rejected
+  } else if (n.title.includes("اولویت برسی")) {
+    emoji = "✅"; // approved
+  } else if (n.title.includes("تایید")) {
+    emoji = "✅"; // approved
+  }
+  
   return (
-    `🔔 ${n.title}\n\n` +
+    `${emoji} ${n.title}\n\n` +
     `📅 ${n.createdAt}\n` +
     `📂 Category: ${n.categoryId}\n` +
     `🔗 ${n.link || "No link"}`
