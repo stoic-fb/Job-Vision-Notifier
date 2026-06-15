@@ -201,7 +201,7 @@ function formatNotification(n) {
   // Determine emoji based on title content
   let emoji = "🔔"; // default
   
-  if (n.title.includes("رد شد")) {
+  if (n.title.includes("رد")) {
     emoji = "❌"; // rejected
   } else if (n.title.includes("اولویت برسی")) {
     emoji = "✅"; // approved
