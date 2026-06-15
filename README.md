@@ -74,11 +74,11 @@ Make sure all values are set correctly before running the script.
 ### 3.1 How To Get JOB VISION TOKEN
  1. go to [JobVISION](https://jobvision.ir)
  and login to your account
- 2. with  ` CTRL + SHIFT + I ` open Incpects elemnts 
+ 2. with  ` CTRL + SHIFT + I ` open Incpects elements 
  3. Go to Network tab 
  4. Put the filter on Fetch/XHR
  5. find the GetContactInfo request
- 6. In the headers you wil find authorization ( we need this in order for app to work with the job vision API)
+ 6. In the headers you will find authorization ( we need this in order for app to work with the job vision API)
 
 >[!WARNING]
 > Each time you login into JobVision the authentication token will be reset and you need to set it again
@@ -93,7 +93,6 @@ Paste the code into Google Apps Script editor.
 
 ---
 
-Fair enough, the last one was too “tutorial-bloggy”. Here’s a **clean, professional Step 5** that actually fits a real GitHub project:
 
 
 ### 5. Set Up Trigger (Required)
