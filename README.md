@@ -72,6 +72,7 @@ JOBVISION_TOKEN
 Make sure all values are set correctly before running the script.
 
 ### 3.1 How To Get JOB VISION TOKEN
+#### OPTION 1
  1. go to [JobVISION](https://jobvision.ir)
  and login to your account
  2. with  ` CTRL + SHIFT + I ` open Incpects elements 
@@ -85,7 +86,23 @@ Make sure all values are set correctly before running the script.
 
 > [!TIP]
 > we don't need the Bearer in the token just the ey....
+#### OPTION 2
+ 1. go to [JobVISION](https://jobvision.ir)
+ and login to your account
+ 2. with  ` CTRL + SHIFT + I ` open Incpects elements
+ 3. go to console tab and write `allow pasting`
+ 4. paste this code and run it
+    ```javascript
+    const authData = JSON.parse(localStorage.getItem('CandidateClient_v2'));
+
+    const accessToken = authData.authnResult.access_token;
+    console.log('Access Token:', accessToken);
     
+    const expiresAt = new Date(authData.access_token_expires_at);
+    console.log('Token expires at:', expiresAt);
+    console.log('Expires in:', Math.floor((expiresAt - Date.now()) / 60000), 'minutes');
+    ```
+ 5. copy the token
     
 
 ### 4. Deploy Script
